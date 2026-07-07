@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MILANAIRE — Portfolio Deck</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ivory:#F4F2ED;--dark:#141311;--ink:#1A1A1A;--serif:'Cormorant Garamond',serif;--sans:'Helvetica Neue','Inter',sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--ivory);font-family:var(--sans);color:var(--ink);width:1400px}
+.slide{width:1400px;position:relative;overflow:hidden;display:none}
+.slide.on{display:block}
+/* corner captions */
+.cap{position:absolute;top:44px;left:56px;right:56px;display:flex;justify-content:space-between;z-index:9;pointer-events:none}
+.cap span{font-family:var(--serif);font-size:26px;font-weight:500}
+.cap em{font-style:italic}
+.cap.inv span{color:var(--ivory)}
+.kick{font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-family:var(--sans)!important;color:rgba(26,26,26,.6)}
+/* frame holder (iframe scaled) */
+.hold{position:relative;margin:130px auto 90px;box-shadow:0 40px 110px rgba(0,0,0,.14);overflow:hidden;background:#fff}
+.hold iframe{border:0;transform-origin:top left;pointer-events:none}
+/* S1 cover */
+#s1{height:1860px;background:var(--ivory)}
+#s1 .title{margin-top:170px;text-align:center;font-family:var(--serif);font-weight:500;font-size:150px;line-height:.92;letter-spacing:.01em;position:relative;z-index:1}
+#s1 .photo{position:relative;width:640px;margin:-38px auto 0}
+#s1 .photo img{width:100%;height:760px;object-fit:cover;display:block}
+#s1 .photo .wm{position:absolute;top:26px;left:0;right:0;text-align:center;font-family:var(--serif);font-weight:500;font-size:96px;color:#fff;mix-blend-mode:screen;letter-spacing:.02em}
+#s1 .goal{margin:64px auto 0;max-width:560px;text-align:center;font-size:12px;letter-spacing:.12em;text-transform:uppercase;line-height:2.1;color:rgba(26,26,26,.75)}
+#s1 .dome{position:absolute;left:-50%;right:-50%;bottom:-560px;height:1000px;border-radius:50% 50% 0 0/38% 38% 0 0;background:linear-gradient(145deg,#2B2926,#1E1D1B 55%,#141311)}
+/* S2 about dark */
+#s2{height:980px;background:linear-gradient(145deg,#2B2926,#1E1D1B 55%,#141311);color:var(--ivory)}
+#s2 .inner{padding:120px 90px}
+#s2 h2{font-family:var(--serif);font-weight:500;font-size:44px;margin-bottom:56px}
+#s2 h2 em{font-style:italic}
+#s2 .thumbs{display:flex;gap:22px;margin-bottom:70px}
+#s2 .thumbs img{height:190px;object-fit:cover;display:block}
+#s2 .cols{display:grid;grid-template-columns:1fr 1fr 1.6fr;gap:60px;font-size:12.5px;line-height:2;color:rgba(244,242,237,.75)}
+#s2 .cols b{display:block;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:rgba(244,242,237,.5);margin-bottom:14px;font-weight:400}
+/* dark slides */
+.darkbg{background:linear-gradient(145deg,#2B2926,#1E1D1B 55%,#141311)}
+/* mobile trio */
+#s11{height:1150px}
+#s11 .row{display:flex;gap:70px;justify-content:center;margin-top:170px}
+.phone{width:330px;height:715px;border-radius:38px;overflow:hidden;position:relative;box-shadow:0 30px 80px rgba(0,0,0,.18);background:#fff}
+.phone iframe{width:390px;height:845px;transform:scale(.846);transform-origin:top left;border:0;pointer-events:none}
+/* typography slide */
+#s12{height:900px;display:flex}
+#s12.on{display:flex}
+#s12 .half{width:50%;padding:110px 80px;display:flex;flex-direction:column;justify-content:flex-end}
+#s12 .half.d{background:linear-gradient(145deg,#2B2926,#1E1D1B 55%,#141311);color:var(--ivory)}
+#s12 .tname{font-size:64px;margin-bottom:26px}
+#s12 .half.d .tname{font-family:var(--serif)}
+#s12 .half.d .tname em{font-style:italic}
+#s12 .chars{font-size:15px;line-height:2.1;opacity:.62;word-break:break-all}
+#s12 .tl{position:absolute;top:44px;left:56px;font-family:var(--serif);font-size:26px}
+/* thanks */
+#s14{height:1250px}
+#s14 .bg{position:absolute;inset:0 0 190px 0}
+#s14 .bg img{width:100%;height:100%;object-fit:cover}
+#s14 .tx{position:absolute;top:46%;left:0;right:0;text-align:center;color:#fff;font-family:var(--serif);font-weight:500;font-size:96px;line-height:1;text-shadow:0 4px 40px rgba(0,0,0,.35)}
+#s14 .tx em{font-style:italic;display:block;font-size:80px}
+#s14 .strip{position:absolute;left:0;right:0;bottom:0;height:190px;background:var(--ivory);display:flex;align-items:center;justify-content:space-between;padding:0 90px;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;line-height:1.9;color:rgba(26,26,26,.7)}
+#s14 .strip b{display:block;color:var(--ink);font-weight:500}
+</style>
+</head>
+<body>
+
+<!-- S1 COVER -->
+<section class="slide" id="s1">
+  <div class="cap"><span class="kick">Online Store</span><span class="kick">UX | UI</span><span class="kick">July 2026</span></div>
+  <div class="title">WEBSITE REDESIGN</div>
+  <div class="photo">
+    <img src="assets/img/H1.jpg" alt="">
+    <div class="wm">MILANAIRE</div>
+  </div>
+  <p class="goal">The goal was to convey the brand's philosophy through the interface: artisan craftsmanship, heritage since 1962, and contemporary living architecture.</p>
+  <div class="dome"></div>
+</section>
+
+<!-- S2 ABOUT -->
+<section class="slide" id="s2">
+  <div class="inner">
+    <h2>About the <em>project</em></h2>
+    <div class="thumbs">
+      <img src="assets/img/L1.jpg" style="width:150px"><img src="assets/img/E2.jpg" style="width:150px">
+      <img src="assets/img/L4.jpg" style="width:330px"><img src="assets/img/P6.jpg" style="width:190px">
+    </div>
+    <div class="cols">
+      <div><b>Adaptive</b>1920<br>1024<br>390</div>
+      <div><b>Pages</b>Home<br>Catalog<br>Product Card<br>Personal Account<br>Purchase Process<br>Cart<br>Page 404<br>Search</div>
+      <div><b>Concept</b>The main concept of the redesign is to translate the brand's philosophy into the digital space. Milanaire is about heritage, craftsmanship, and living architecture — and the website's goal isn't to talk about luxury, but to allow you to experience it. Fully working live build, all imagery AI-generated as one campaign.</div>
+    </div>
+  </div>
+</section>
+
+<!-- S3 HOME DESKTOP -->
+<section class="slide" id="s3" style="height:2620px">
+  <div class="cap"><span>Home <em>page</em></span><span><em>Desktop</em></span></div>
+  <div class="hold" style="width:1160px;height:2400px">
+    <iframe src="index.html" style="width:1440px;height:2980px;transform:scale(.8056)"></iframe>
+  </div>
+</section>
+
+<!-- S4 MENU -->
+<section class="slide darkbg" id="s4" style="height:1160px">
+  <div class="cap inv"><span>Menu</span><span><em>Desktop</em></span></div>
+  <div class="hold" style="width:1160px;height:900px">
+    <iframe src="index.html?open=menu" style="width:1440px;height:1118px;transform:scale(.8056)"></iframe>
+  </div>
+</section>
+
+<!-- S5 SEARCH -->
+<section class="slide darkbg" id="s5" style="height:1160px">
+  <div class="cap inv"><span>Search</span><span><em>Desktop</em></span></div>
+  <div class="hold" style="width:1160px;height:900px">
+    <iframe src="index.html?open=search" style="width:1440px;height:1118px;transform:scale(.8056)"></iframe>
+  </div>
+</section>
+
+<!-- S6 CATALOG -->
+<section class="slide" id="s6" style="height:2620px">
+  <div class="cap"><span>Cata<em>log</em></span><span><em>Desktop</em></span></div>
+  <div class="hold" style="width:1160px;height:2400px">
+    <iframe src="catalog.html" style="width:1440px;height:2980px;transform:scale(.8056)"></iframe>
+  </div>
+</section>
+
+<!-- S7 PRODUCT -->
+<section class="slide" id="s7" style="height:2620px">
+  <div class="cap"><span>Product <em>card</em></span><span><em>Desktop</em></span></div>
+  <div class="hold" style="width:1160px;height:2400px">
+    <iframe src="product.html" style="width:1440px;height:2980px;transform:scale(.8056)"></iframe>
+  </div>
+</section>
+
+<!-- S8 BASKET -->
+<section class="slide darkbg" id="s8" style="height:1160px">
+  <div class="cap inv"><span>Bas<em>ket</em></span><span><em>Desktop</em></span></div>
+  <div class="hold" style="width:1160px;height:900px">
+    <iframe src="index.html?open=cart" style="width:1440px;height:1118px;transform:scale(.8056)"></iframe>
+  </div>
+</section>
+
+<!-- S9 CHECKOUT -->
+<section class="slide" id="s9" style="height:1500px">
+  <div class="cap"><span>The purch<em>asing</em></span><span><em>process</em></span></div>
+  <div class="hold" style="width:1160px;height:1240px">
+    <iframe src="checkout.html" style="width:1440px;height:1540px;transform:scale(.8056)"></iframe>
+  </div>
+</section>
+
+<!-- S10 ACCOUNT -->
+<section class="slide" id="s10" style="height:2300px">
+  <div class="cap"><span>Personal</span><span><em>account</em></span></div>
+  <div class="hold" style="width:1160px;height:2080px">
+    <iframe src="account.html" style="width:1440px;height:2582px;transform:scale(.8056)"></iframe>
+  </div>
+</section>
+
+<!-- S11 MOBILE TRIO -->
+<section class="slide" id="s11">
+  <div class="cap"><span>Home <em>page</em></span><span><em>Mobile</em></span></div>
+  <div class="row">
+    <div class="phone"><iframe src="index.html"></iframe></div>
+    <div class="phone"><iframe src="catalog.html"></iframe></div>
+    <div class="phone"><iframe src="product.html"></iframe></div>
+  </div>
+</section>
+
+<!-- S12 TYPOGRAPHY -->
+<section class="slide" id="s12">
+  <div class="tl" style="z-index:5">Typo<em>graphy</em></div>
+  <div class="half">
+    <div class="tname">Helvetica Neue</div>
+    <p class="chars">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789?&lt;&gt;$/{_}</p>
+  </div>
+  <div class="half d">
+    <div class="tname">Cormorant <em>Garamond</em></div>
+    <p class="chars">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789?&lt;&gt;$/{_}</p>
+  </div>
+</section>
+
+<!-- S13 404 -->
+<section class="slide" id="s13" style="height:1280px">
+  <div class="cap"><span>404</span><span><em>Page</em></span></div>
+  <div class="hold" style="width:1160px;height:1020px">
+    <iframe src="404.html" style="width:1440px;height:1266px;transform:scale(.8056)"></iframe>
+  </div>
+</section>
+
+<!-- S14 THANKS -->
+<section class="slide" id="s14">
+  <div class="bg"><img src="assets/img/X2.jpg" alt=""></div>
+  <div class="tx">Thanks for <em>watching</em></div>
+  <div class="strip">
+    <div>All imagery for this project<br>was generated with AI and belongs<br>to the Milanaire concept</div>
+    <div><b>Designed by</b>J AI Studio</div>
+    <div><b>Year</b>2026</div>
+    <div><b>Milanaire</b>2026 — Concept</div>
+    <div><b>Thank you</b>For watching</div>
+  </div>
+</section>
+
+<script>
+const s=new URLSearchParams(location.search).get('s')||'1';
+const el=document.getElementById('s'+s);
+if(el)el.classList.add('on');
+</script>
+</body>
+</html>

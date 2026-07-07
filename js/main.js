@@ -221,3 +221,7 @@ document.querySelectorAll('.pdp__thumbs .slot').forEach(t => {
     t.classList.add('is-active');
   });
 });
+
+
+/* auto-open overlay for portfolio capture (?open=menu|search|cart) */
+try{const q=new URLSearchParams(location.search).get('open');if(q&&overlays[q])overlays[q].classList.add('is-open');}catch(e){}
