@@ -1,5 +1,5 @@
-/* ============================================
-   VISIONNAIRE Clone — Main Stylesheet (BEM)
+﻿/* ============================================
+   VISIONNAIRE Clone ??Main Stylesheet (BEM)
    ============================================ */
 
 /* ---------- Reset & Base ---------- */
@@ -43,12 +43,12 @@ input, textarea, select { font: inherit; color: inherit; }
   display: inline-flex; align-items: center; gap: 10px;
   font-size: var(--fs-small); text-decoration: underline; text-underline-offset: 4px;
 }
-.link-arrow::after { content: '→'; text-decoration: none; transition: transform 0.3s var(--ease-out); }
+.link-arrow::after { content: '??; text-decoration: none; transition: transform 0.3s var(--ease-out); }
 .link-arrow:hover::after { transform: translateX(6px); }
 
 /* ---------- Image slot (placeholder system) ----------
-   이미지가 assets/img/{CODE}.jpg 에 있으면 자동 표시,
-   없으면 코드+설명 라벨이 보이는 플레이스홀더 */
+   ?대?吏媛 assets/img/{CODE}.jpg ???덉쑝硫??먮룞 ?쒖떆,
+   ?놁쑝硫?肄붾뱶+?ㅻ챸 ?쇰꺼??蹂댁씠???뚮젅?댁뒪???*/
 .slot {
   position: relative;
   background: linear-gradient(145deg, #E9E6DE 0%, #DDD9CF 100%);
@@ -150,7 +150,7 @@ input, textarea, select { font: inherit; color: inherit; }
 
 /* ---------- Product card ---------- */
 .pcard { position: relative; }
-.pcard__media { position: relative; aspect-ratio: 1 / 1.05; }
+.pcard__media { display: block; position: relative; aspect-ratio: 1 / 1.05; }
 .pcard__media .slot { position: absolute; inset: 0; }
 .pcard__media img { transition: transform 1s var(--ease-out); }
 .pcard:hover .pcard__media img { transform: scale(1.045); }
@@ -463,7 +463,7 @@ input, textarea, select { font: inherit; color: inherit; }
 .radio-row label { display: flex; gap: 10px; align-items: center; cursor: pointer; }
 .check-row { display: flex; gap: 10px; align-items: center; font-size: var(--fs-small); margin: 18px 0; }
 
-/* ---------- Page hero (catalog 등) ---------- */
+/* ---------- Page hero (catalog ?? ---------- */
 .page-title {
   text-align: center; font-size: var(--fs-display);
   padding: var(--sp-5) 0 var(--sp-4);
