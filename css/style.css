@@ -661,3 +661,5 @@ input, textarea, select { font: inherit; color: inherit; }
   .shoppable, .rooms, .pdp__video, .designer { margin-top: var(--sp-5); margin-bottom: var(--sp-5); }
   .grid-3 { row-gap: 40px; }
 }
+/* fix: .section overrides .container horizontal padding */
+.section.container { padding: var(--sp-6) var(--gutter); }
