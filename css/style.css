@@ -663,3 +663,5 @@ input, textarea, select { font: inherit; color: inherit; }
 }
 /* fix: .section overrides .container horizontal padding */
 .section.container { padding: var(--sp-6) var(--gutter); }
+/* cap hero height (also fixes tall-viewport captures) */
+.hero__media { height: min(calc(100vh - var(--nav-h)), 900px); }
