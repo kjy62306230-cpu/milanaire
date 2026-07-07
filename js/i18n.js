@@ -144,7 +144,7 @@ function setLang(l){
   swapText(l);
   document.documentElement.lang=l;
   document.querySelectorAll('.lang-sw button').forEach(b=>b.classList.toggle('is-on',b.dataset.l===l));
-  try{localStorage.setItem('ml-lang',l)}catch(e){}
+  try{if(!new URLSearchParams(location.search).has('still'))localStorage.setItem('ml-lang',l)}catch(e){}
 }
 /* switcher UI */
 const css=document.createElement('style');
@@ -155,5 +155,5 @@ sw.className='lang-sw';
 sw.innerHTML='<button data-l="ko">KO</button><button data-l="en">EN</button><button data-l="ja">JA</button><button data-l="zh">ZH</button>';
 sw.addEventListener('click',e=>{const b=e.target.closest('button');if(b)setLang(b.dataset.l)});
 (document.querySelector('.header__actions')||document.body).appendChild(sw);
-setLang(new URLSearchParams(location.search).get('lang')||(()=>{try{return localStorage.getItem('ml-lang')}catch(e){return null}})()||'en');
+var _q=new URLSearchParams(location.search);setLang(_q.get('lang')||(_q.has('still')?'en':(((()=>{try{return localStorage.getItem('ml-lang')}catch(e){return null}})())||'en')));
 })();
