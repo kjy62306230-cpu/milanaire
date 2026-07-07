@@ -1,0 +1,49 @@
+/* ============================================
+   VISIONNAIRE Clone — Design Tokens
+   ============================================ */
+:root {
+  /* Colors */
+  --bg-ivory: #F4F2ED;
+  --bg-ivory-deep: #EDEBE4;
+  --bg-card: #EDEBE6;
+  --bg-dark: #1E1D1B;
+  --grad-dark: linear-gradient(145deg, #2B2926 0%, #1E1D1B 45%, #151412 100%);
+  --text-primary: #1A1A1A;
+  --text-secondary: rgba(26, 26, 26, 0.55);
+  --text-inverse: #F4F2ED;
+  --text-inverse-dim: rgba(244, 242, 237, 0.6);
+  --line: rgba(26, 26, 26, 0.16);
+  --line-inverse: rgba(244, 242, 237, 0.2);
+  --white: #FFFFFF;
+
+  /* Typography */
+  --font-serif: 'Cormorant Garamond', 'Cormorant', Georgia, serif;
+  --font-sans: 'Helvetica Neue', 'Inter', Helvetica, Arial, sans-serif;
+
+  /* Type scale */
+  --fs-wordmark: clamp(64px, 11.5vw, 220px);
+  --fs-display: clamp(40px, 5.2vw, 88px);
+  --fs-h2: clamp(32px, 3.4vw, 56px);
+  --fs-h3: clamp(24px, 2.2vw, 36px);
+  --fs-body: 15px;
+  --fs-small: 13px;
+  --fs-label: 11px;
+
+  /* Spacing */
+  --sp-1: 8px;
+  --sp-2: 16px;
+  --sp-3: 24px;
+  --sp-4: 40px;
+  --sp-5: 64px;
+  --sp-6: 96px;
+  --sp-7: 140px;
+
+  /* Layout */
+  --container: 1680px;
+  --gutter: clamp(20px, 3vw, 56px);
+  --nav-h: 64px;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur: 0.8s;
+}

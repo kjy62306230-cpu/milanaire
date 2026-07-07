@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nodo — MILANAIRE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__inner">
+      <nav class="header__nav">
+        <a href="index.html">Rooms</a>
+        <a href="#" data-overlay="menu">Products</a>
+        <a href="#">Projects</a>
+        <a href="#">Magazine</a>
+      </nav>
+      <button class="header__burger" data-overlay="menu" aria-label="menu">&#9776;</button>
+      <a class="header__logo" href="index.html">milanaire</a>
+      <div class="header__actions">
+        <button data-overlay="search">Search</button>
+        <a href="account.html">Account</a>
+        <a href="account.html#wishlist">Favorites</a>
+        <button data-overlay="cart">Cart (<span data-cart-count>0</span>)</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== PDP top ===== -->
+  <section class="pdp">
+    <div class="pdp__left" data-carousel>
+      <h1 class="pdp__title serif">No<em>do</em></h1>
+      <div class="pdp__price">$ 760</div>
+      <div class="pdp__stage">
+        <button class="carousel__arrow carousel__arrow--prev">&larr;</button>
+        <figure class="slot slot--product slot--contain" data-code="P1" data-note="Nodo 메인 컷 (정면)">
+          <img src="assets/img/P1.jpg" alt="Nodo armchair" onerror="this.remove()">
+        </figure>
+        <button class="carousel__arrow carousel__arrow--next">&rarr;</button>
+        <button class="pcard__wish" style="position:absolute; top:0; right:0" aria-label="wishlist">&#9825;</button>
+      </div>
+      <div class="pdp__thumbs">
+        <figure class="slot is-active" data-code="P1" data-note=""><img src="assets/img/P1.jpg" alt="" onerror="this.remove()"></figure>
+        <figure class="slot" data-code="P1b" data-note="측면"><img src="assets/img/P1b.jpg" alt="" onerror="this.remove()"></figure>
+        <figure class="slot" data-code="P1c" data-note="후면"><img src="assets/img/P1c.jpg" alt="" onerror="this.remove()"></figure>
+        <figure class="slot" data-code="P1d" data-note="디테일"><img src="assets/img/P1d.jpg" alt="" onerror="this.remove()"></figure>
+      </div>
+      <a class="btn btn--dark" href="#" data-add-cart>ADD TO CART &rarr;</a>
+    </div>
+    <div class="pdp__right">
+      <figure class="slot" data-code="P1e" data-note="Nodo 매듭 텍스처 클로즈업 (풀블리드)">
+        <img src="assets/img/P1e.jpg" alt="Nodo detail" loading="lazy" onerror="this.remove()">
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===== About ===== -->
+  <section class="pdp__about reveal">
+    <h2 class="serif">About No<em>do</em></h2>
+    <p>Small armchair upholstered in stretch fabric, featuring a curved tubular metal frame fully padded with high-density expanded polyurethane and covered in fabric. The front and rear legs merge into the backrest, forming an interwoven structural element. The seat, supported by elastic webbing and padded with polyurethane, is also available in a Green version with metal spring suspension and plant-based materials.</p>
+    <div class="pdp__links">
+      <a class="link-underline" href="#">Configurator PRO</a>
+      <a class="link-underline" href="#">Download technical sheet</a>
+      <a class="link-underline" href="#">Download 3D files</a>
+      <a class="link-underline" href="#">Download DWG</a>
+    </div>
+  </section>
+
+  <!-- ===== Lifestyle video ===== -->
+  <section class="pdp__video reveal">
+    <figure class="slot" data-code="L5" data-note="Nodo 라이프스타일 — 조각적 화이트 인테리어">
+      <img src="assets/img/L5.jpg" alt="Nodo in interior" loading="lazy" onerror="this.remove()">
+    </figure>
+    <button class="pdp__play" aria-label="play video">&#9654;</button>
+  </section>
+
+  <!-- ===== You may also like ===== -->
+  <section class="section container">
+    <div class="section__head reveal">
+      <h2 class="section__title serif">You <em>May</em> Also <em>Like</em></h2>
+    </div>
+    <div class="grid-3" data-stagger>
+      <article class="pcard">
+        <a class="pcard__media" href="#">
+          <figure class="slot slot--product slot--contain" data-code="P11" data-note="Parata — 브라스 샹들리에">
+            <img src="assets/img/P11.jpg" alt="Parata lighting" loading="lazy" onerror="this.remove()">
+          </figure>
+        </a>
+        <button class="pcard__wish" aria-label="wishlist">&#9825;</button>
+        <div class="pcard__info">
+          <div>
+            <div class="pcard__name">PARATA <span class="pcard__designer">Studiovera Lighting</span></div>
+            <div class="pcard__price">$ 800</div>
+          </div>
+          <a class="link-underline pcard__cart" href="#" data-add-cart>Add to cart</a>
+        </div>
+      </article>
+      <article class="pcard">
+        <a class="pcard__media" href="#">
+          <figure class="slot slot--product slot--contain" data-code="P2" data-note="Ludo Marble — 마블 테이블">
+            <img src="assets/img/P2.jpg" alt="Ludo Marble table" loading="lazy" onerror="this.remove()">
+          </figure>
+        </a>
+        <button class="pcard__wish" aria-label="wishlist">&#9825;</button>
+        <div class="pcard__info">
+          <div>
+            <div class="pcard__name">LUDO MARBLE <span class="pcard__designer">Dara &amp; Ansel Tables</span></div>
+            <div class="pcard__price">$ 1160</div>
+          </div>
+          <a class="link-underline pcard__cart" href="#" data-add-cart>Add to cart</a>
+        </div>
+      </article>
+      <article class="pcard">
+        <a class="pcard__media" href="#">
+          <figure class="slot slot--product slot--contain" data-code="P3" data-note="Velluta — 소파">
+            <img src="assets/img/P3.jpg" alt="Velluta sofa" loading="lazy" onerror="this.remove()">
+          </figure>
+        </a>
+        <button class="pcard__wish" aria-label="wishlist">&#9825;</button>
+        <div class="pcard__info">
+          <div>
+            <div class="pcard__name">VELLUTA <span class="pcard__designer">Studiovera Sofas</span></div>
+            <div class="pcard__price">$ 1290</div>
+          </div>
+          <a class="link-underline pcard__cart" href="#" data-add-cart>Add to cart</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== Designer : Studiovera ===== -->
+  <section class="designer reveal">
+    <div class="designer__photo">
+      <figure class="slot" data-code="PT1" data-note="Studiovera 디자이너 흑백 포트레이트">
+        <img src="assets/img/PT1.jpg" alt="Studiovera" loading="lazy" onerror="this.remove()">
+      </figure>
+    </div>
+    <div class="designer__body">
+      <h2 class="serif">Studio<em>vera</em></h2>
+      <p>Studiovera is a design agency founded in Milan in 2008, by Livia Manzoni and Carla Ricci. Studiovera's focus is on design and research through the use of a multidisciplinary approach.</p>
+      <a class="link-arrow" href="#">DISCOVER MORE</a>
+    </div>
+  </section>
+
+  <!-- ===== Our Journal ===== -->
+  <section class="section container">
+    <div class="section__head reveal" style="justify-content:center">
+      <h2 class="section__title serif"><em>Our</em> Journal</h2>
+    </div>
+    <div class="journal__grid" data-stagger>
+      <a class="journal__card" href="#">
+        <span style="margin-bottom:10px">Voices and Spaces of Design</span>
+        <figure class="slot" data-code="E1" data-note="저널 1 — 플랫레이 매거진 무드">
+          <img src="assets/img/E1.jpg" alt="" loading="lazy" onerror="this.remove()">
+        </figure>
+      </a>
+      <a class="journal__card" href="#">
+        <span style="margin-bottom:10px">Milanaire partners with Artissima 2026</span>
+        <figure class="slot" data-code="E2" data-note="저널 2 — 아웃도어 디테일">
+          <img src="assets/img/E2.jpg" alt="" loading="lazy" onerror="this.remove()">
+        </figure>
+      </a>
+      <a class="journal__card" href="#">
+        <span style="margin-bottom:10px">Milanaire at Salone del Mobile Milano</span>
+        <figure class="slot" data-code="X2" data-note="저널 3 — 오브제 톱다운">
+          <img src="assets/img/X2.jpg" alt="" loading="lazy" onerror="this.remove()">
+        </figure>
+      </a>
+    </div>
+    <div class="loadmore reveal"><a class="link-arrow" href="#">SEE MORE</a></div>
+  </section>
+
+  <!-- ===== READ / SHOP ===== -->
+  <section class="explore">
+    <div class="container explore__row reveal">
+      <a class="explore__item serif" href="#">
+        <figure class="slot" data-code="P16" data-note="READ 글자 위 — 캐러멜 오토만 누끼">
+          <img src="assets/img/P16.jpg" alt="" loading="lazy" onerror="this.remove()">
+        </figure>
+        READ
+      </a>
+      <p class="explore__mid">Keep<br>Exploring</p>
+      <a class="explore__item serif" href="catalog.html">
+        <figure class="slot" data-code="P17" data-note="SHOP 글자 위 — 크림 체어 누끼">
+          <img src="assets/img/P17.jpg" alt="" loading="lazy" onerror="this.remove()">
+        </figure>
+        SHOP
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__wordmark">MILANAIRE</div>
+    <div class="footer__bottom">
+      <span>&copy; Milanaire</span>
+      <div class="footer__bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+      <span>Site by J AI Studio</span>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/scroll.js"></script>
+</body>
+</html>

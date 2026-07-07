@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MILANAIRE — Rooms that go beyond aesthetics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="header">
+    <div class="header__inner">
+      <nav class="header__nav">
+        <a href="index.html">Rooms</a>
+        <a href="#" data-overlay="menu">Products</a>
+        <a href="#">Projects</a>
+        <a href="#">Magazine</a>
+      </nav>
+      <button class="header__burger" data-overlay="menu" aria-label="menu">&#9776;</button>
+      <a class="header__logo" href="index.html">milanaire</a>
+      <div class="header__actions">
+        <button data-overlay="search">Search</button>
+        <a href="account.html">Account</a>
+        <a href="account.html#wishlist">Favorites</a>
+        <button data-overlay="cart">Cart (<span data-cart-count>0</span>)</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="hero__media">
+      <figure class="slot" data-code="H1" data-note="메인 히어로 — 골든아워 야외 테라스 크림 소파">
+        <img src="assets/img/H1.jpg" alt="Milanaire outdoor terrace" onerror="this.remove()">
+      </figure>
+      <p class="hero__tagline">Rooms that go beyond aesthetics.<br>A dialogue between heritage and future.</p>
+      <h1 class="hero__wordmark">MILANAIRE</h1>
+    </div>
+  </section>
+
+  <!-- ===== Bestsellers ===== -->
+  <section class="section container">
+    <div class="section__head reveal">
+      <h2 class="section__title serif">Best<em>sellers</em></h2>
+    </div>
+    <div class="section__head reveal">
+      <div class="chips">
+        <button class="is-active">All</button>
+        <button>Tables</button>
+        <button>Armchairs</button>
+        <button>Sofas</button>
+        <button>Beds</button>
+        <button>Lighting</button>
+        <button>Accessories</button>
+      </div>
+      <div class="carousel__arrows">
+        <button class="carousel__arrow">&larr;</button>
+        <button class="carousel__arrow">&rarr;</button>
+      </div>
+    </div>
+    <div class="grid-3" data-stagger>
+      <article class="pcard">
+        <a class="pcard__media" href="product.html">
+          <figure class="slot slot--product slot--contain" data-code="P1" data-note="Nodo — 매듭 부클레 암체어">
+            <img src="assets/img/P1.jpg" alt="Nodo armchair" loading="lazy" onerror="this.remove()">
+          </figure>
+        </a>
+        <button class="pcard__wish" aria-label="wishlist">&#9825;</button>
+        <div class="pcard__info">
+          <div>
+            <div class="pcard__name">NODO <span class="pcard__designer">Studiovera Armchairs</span></div>
+            <div class="pcard__price">$ 760</div>
+          </div>
+          <a class="link-underline pcard__cart" href="#" data-add-cart>Add to cart</a>
+        </div>
+      </article>
+      <article class="pcard">
+        <a class="pcard__media" href="product.html">
+          <figure class="slot slot--product slot--contain" data-code="P2" data-note="Corvino — 그린 마블 다이닝 테이블">
+            <img src="assets/img/P2.jpg" alt="Corvino table" loading="lazy" onerror="this.remove()">
+          </figure>
+        </a>
+        <button class="pcard__wish" aria-label="wishlist">&#9825;</button>
+        <div class="pcard__info">
+          <div>
+            <div class="pcard__name">CORVINO <span class="pcard__designer">Andrea Morelli Tables</span></div>
+            <div class="pcard__price">$ 630</div>
+          </div>
+          <a class="link-underline pcard__cart" href="#" data-add-cart>Add to cart</a>
+        </div>
+      </article>
+      <article class="pcard">
+        <a class="pcard__media" href="product.html">
+          <figure class="slot slot--product slot--contain" data-code="P3" data-note="Walden — 아이보리 모듈 소파">
+            <img src="assets/img/P3.jpg" alt="Walden sofa" loading="lazy" onerror="this.remove()">
+          </figure>
+        </a>
+        <button class="pcard__wish is-active" aria-label="wishlist">&#9829;</button>
+        <div class="pcard__info">
+          <div>
+            <div class="pcard__name">WALDEN <span class="pcard__designer">Fabio Benti Sofas</span></div>
+            <div class="pcard__price">$ 2260</div>
+          </div>
+          <a class="link-underline pcard__cart" href="#" data-add-cart>Add to cart</a>
+        </div>
+      </article>
+    </div>
+    <div class="loadmore reveal">
+      <a class="link-arrow" href="catalog.html">SHOP ALL</a>
+    </div>
+  </section>
+
+  <!-- ===== Shoppable image ===== -->
+  <section class="shoppable container reveal">
+    <figure class="slot" data-code="L4" data-note="쇼퍼블 거실 — 우드 패널·가죽 소파·샹들리에">
+      <img src="assets/img/L4.jpg" alt="Shoppable living room" loading="lazy" onerror="this.remove()">
+    </figure>
+    <button class="hotspot" style="left:12%; top:38%" data-pop="pop1">+</button>
+    <button class="hotspot" style="left:47%; top:22%" data-pop="pop2">+</button>
+    <button class="hotspot" style="left:42%; bottom:14%" data-pop="pop3">+</button>
+    <div class="hotspot__pop" id="pop2" style="left:50%; top:28%">
+      <figure class="slot slot--product slot--contain" data-code="P11" data-note="Saturnia 샹들리에">
+        <img src="assets/img/P11.jpg" alt="Saturnia" loading="lazy" onerror="this.remove()">
+      </figure>
+      <div class="hotspot__pop-row">
+        <span>SATURNIA<br>$ 1070</span>
+        <a class="link-underline" href="#" data-add-cart>Add to cart</a>
+      </div>
+    </div>
+    <div class="hotspot__pop" id="pop1" style="left:15%; top:44%">
+      <figure class="slot slot--product slot--contain" data-code="P9" data-note="브론즈 커피 테이블">
+        <img src="assets/img/P9.jpg" alt="" loading="lazy" onerror="this.remove()">
+      </figure>
+      <div class="hotspot__pop-row">
+        <span>VERONA<br>$ 760</span>
+        <a class="link-underline" href="#" data-add-cart>Add to cart</a>
+      </div>
+    </div>
+    <div class="hotspot__pop" id="pop3" style="left:45%; bottom:20%">
+      <figure class="slot slot--product slot--contain" data-code="P14" data-note="스토리지 유닛">
+        <img src="assets/img/P14.jpg" alt="" loading="lazy" onerror="this.remove()">
+      </figure>
+      <div class="hotspot__pop-row">
+        <span>LEONE<br>$ 980</span>
+        <a class="link-underline" href="#" data-add-cart>Add to cart</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Categories cloud ===== -->
+  <section class="section catcloud">
+    <p class="label catcloud__label reveal">Categories</p>
+    <div class="catcloud__list reveal">
+      <a class="catcloud__item serif" href="catalog.html">Beds<sup class="catcloud__count">110+</sup>
+        <span class="catcloud__thumb"><span class="slot" data-code="L1" data-note=""><img src="assets/img/L1.jpg" alt="" loading="lazy" onerror="this.remove()"></span></span>
+      </a>
+      <a class="catcloud__item serif" href="catalog.html">Lighting<sup class="catcloud__count">140+</sup>
+        <span class="catcloud__thumb"><span class="slot" data-code="P8" data-note=""><img src="assets/img/P8.jpg" alt="" loading="lazy" onerror="this.remove()"></span></span>
+      </a>
+      <a class="catcloud__item serif" href="catalog.html">Kitchen<sup class="catcloud__count">40+</sup>
+        <span class="catcloud__thumb"><span class="slot" data-code="L3" data-note=""><img src="assets/img/L3.jpg" alt="" loading="lazy" onerror="this.remove()"></span></span>
+      </a>
+      <a class="catcloud__item serif" href="catalog.html">Accessories<sup class="catcloud__count">190+</sup>
+        <span class="catcloud__thumb"><span class="slot" data-code="P12" data-note=""><img src="assets/img/P12.jpg" alt="" loading="lazy" onerror="this.remove()"></span></span>
+      </a>
+      <a class="catcloud__item serif" href="catalog.html">Sofas &amp; Modular<sup class="catcloud__count">100+</sup>
+        <span class="catcloud__thumb"><span class="slot" data-code="P3" data-note=""><img src="assets/img/P3.jpg" alt="" loading="lazy" onerror="this.remove()"></span></span>
+      </a>
+      <a class="catcloud__item serif is-active" href="catalog.html">Tables<sup class="catcloud__count">240+</sup>
+        <span class="catcloud__thumb"><span class="slot" data-code="L2" data-note=""><img src="assets/img/L2.jpg" alt="" loading="lazy" onerror="this.remove()"></span></span>
+      </a>
+      <a class="catcloud__item serif" href="catalog.html">Armchairs<sup class="catcloud__count">220+</sup>
+        <span class="catcloud__thumb"><span class="slot" data-code="P10" data-note=""><img src="assets/img/P10.jpg" alt="" loading="lazy" onerror="this.remove()"></span></span>
+      </a>
+      <a class="catcloud__item serif" href="catalog.html">Cabinets &amp; Sideboards<sup class="catcloud__count">90+</sup>
+        <span class="catcloud__thumb"><span class="slot" data-code="P7" data-note=""><img src="assets/img/P7.jpg" alt="" loading="lazy" onerror="this.remove()"></span></span>
+      </a>
+      <a class="catcloud__item serif" href="catalog.html">Wardrobes &amp; Walk-ins<sup class="catcloud__count">70+</sup>
+        <span class="catcloud__thumb"><span class="slot" data-code="P14" data-note=""><img src="assets/img/P14.jpg" alt="" loading="lazy" onerror="this.remove()"></span></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== Bedroom / Dining ===== -->
+  <section class="rooms reveal">
+    <div class="rooms__photo">
+      <figure class="slot" data-code="L1" data-note="침실 무드 — 돌 무드등 + 베드">
+        <img src="assets/img/L1.jpg" alt="Bedroom mood" loading="lazy" onerror="this.remove()">
+      </figure>
+    </div>
+    <div class="rooms__panel" data-carousel>
+      <h3 class="rooms__title serif">Bed<em>room</em></h3>
+      <button class="carousel__arrow carousel__arrow--prev">&larr;</button>
+      <article class="pcard">
+        <div class="pcard__media">
+          <figure class="slot slot--product slot--contain" data-code="P4" data-note="Luneto — 크림 패브릭 베드">
+            <img src="assets/img/P4.jpg" alt="Luneto bed" loading="lazy" onerror="this.remove()">
+          </figure>
+          <button class="pcard__wish" aria-label="wishlist">&#9825;</button>
+        </div>
+        <div class="pcard__info">
+          <div>
+            <div class="pcard__name">LUNETO <span class="pcard__designer">Andrea Morelli Beds</span></div>
+            <div class="pcard__price">$ 1090</div>
+          </div>
+          <a class="link-underline pcard__cart" href="#" data-add-cart>Add to cart</a>
+        </div>
+      </article>
+      <button class="carousel__arrow carousel__arrow--next">&rarr;</button>
+    </div>
+    <div class="rooms__panel" data-carousel>
+      <h3 class="rooms__title serif">Dining <em>room</em></h3>
+      <button class="carousel__arrow carousel__arrow--prev">&larr;</button>
+      <article class="pcard">
+        <div class="pcard__media">
+          <figure class="slot slot--product slot--contain" data-code="P13" data-note="Zia Deco — 부클레 다이닝 체어">
+            <img src="assets/img/P13.jpg" alt="Zia Deco chair" loading="lazy" onerror="this.remove()">
+          </figure>
+          <button class="pcard__wish" aria-label="wishlist">&#9825;</button>
+        </div>
+        <div class="pcard__info">
+          <div>
+            <div class="pcard__name">ZIA DECO <span class="pcard__designer">Dara &amp; Ansel Chairs</span></div>
+            <div class="pcard__price">$ 570</div>
+          </div>
+          <a class="link-underline pcard__cart" href="#" data-add-cart>Add to cart</a>
+        </div>
+      </article>
+      <button class="carousel__arrow carousel__arrow--next">&rarr;</button>
+    </div>
+    <div class="rooms__photo">
+      <figure class="slot" data-code="L2" data-note="다이닝룸 — 라운드 마블 테이블">
+        <img src="assets/img/L2.jpg" alt="Dining room" loading="lazy" onerror="this.remove()">
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===== About ===== -->
+  <section class="about reveal">
+    <figure class="slot" data-code="H2" data-note="About — 브루탈리스트 빌라 외관 (황혼)">
+      <img src="assets/img/H2.jpg" alt="Milanaire architecture" loading="lazy" onerror="this.remove()">
+    </figure>
+    <div class="about__overlay">
+      <p class="label about__label">About</p>
+      <p class="about__copy">We transform Italian artisanal mastery into living architecture. Since 1962 — crafting spaces that are not merely seen, but deeply felt.</p>
+    </div>
+    <a class="link-arrow about__more" href="#">SEE MORE</a>
+  </section>
+
+  <!-- ===== Instagram collage ===== -->
+  <section class="insta">
+    <div class="insta__scatter insta__scatter--1"><span class="slot" data-code="E2" data-note=""><img src="assets/img/E2.jpg" alt="" loading="lazy" onerror="this.remove()"></span></div>
+    <div class="insta__scatter insta__scatter--2"><span class="slot" data-code="X1" data-note=""><img src="assets/img/X1.jpg" alt="" loading="lazy" onerror="this.remove()"></span></div>
+    <div class="insta__scatter insta__scatter--3"><span class="slot" data-code="PT1" data-note=""><img src="assets/img/PT1.jpg" alt="" loading="lazy" onerror="this.remove()"></span></div>
+    <div class="insta__scatter insta__scatter--4"><span class="slot" data-code="E1" data-note=""><img src="assets/img/E1.jpg" alt="" loading="lazy" onerror="this.remove()"></span></div>
+    <div class="insta__scatter insta__scatter--5"><span class="slot" data-code="P12" data-note=""><img src="assets/img/P12.jpg" alt="" loading="lazy" onerror="this.remove()"></span></div>
+    <div class="insta__scatter insta__scatter--6"><span class="slot" data-code="L6" data-note=""><img src="assets/img/L6.jpg" alt="" loading="lazy" onerror="this.remove()"></span></div>
+    <div class="insta__scatter insta__scatter--7"><span class="slot" data-code="X2" data-note=""><img src="assets/img/X2.jpg" alt="" loading="lazy" onerror="this.remove()"></span></div>
+    <div class="insta__center reveal">
+      <div class="insta__logo">milanaire</div>
+      <p class="label">Follow our Instagram</p>
+      <a class="insta__handle" href="#">@milanaire</a>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__cols">
+        <div class="footer__col">
+          <h4 class="label">Menu</h4>
+          <ul>
+            <li><a href="index.html">Rooms</a></li>
+            <li><a href="catalog.html">Collections</a></li>
+            <li><a href="#">Materials &amp; Finishes</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Store Locator</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="label">Information</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Craftsmanship</a></li>
+            <li><a href="#">Sustainability</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="label">Support</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Shipping &amp; Returns</a></li>
+            <li><a href="#">Warranty</a></li>
+            <li><a href="#">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="label">Social</h4>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Pinterest</a></li>
+            <li><a href="#">YouTube</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+        <div class="footer__col footer__news">
+          <h4 class="label">Newsletter</h4>
+          <p>Become part of the conversation about Italian design</p>
+          <form class="footer__news-form" onsubmit="return false">
+            <input type="email" placeholder="Email">
+            <button aria-label="subscribe">&rarr;</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer__wordmark">MILANAIRE</div>
+    <div class="footer__bottom">
+      <span>&copy; Milanaire</span>
+      <div class="footer__bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Shipping Policy</a>
+        <a href="#">Return Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+      <span>Site by J AI Studio</span>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/scroll.js"></script>
+</body>
+</html>

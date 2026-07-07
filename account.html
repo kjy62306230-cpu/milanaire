@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account — MILANAIRE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__inner">
+      <nav class="header__nav">
+        <a href="index.html">Rooms</a>
+        <a href="#" data-overlay="menu">Products</a>
+        <a href="#">Projects</a>
+        <a href="#">Magazine</a>
+      </nav>
+      <button class="header__burger" data-overlay="menu" aria-label="menu">&#9776;</button>
+      <a class="header__logo" href="index.html">milanaire</a>
+      <div class="header__actions">
+        <button data-overlay="search">Search</button>
+        <a href="account.html">Account</a>
+        <a href="#wishlist">Favorites</a>
+        <button data-overlay="cart">Cart (<span data-cart-count>0</span>)</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Entrance (login) ===== -->
+  <section class="auth reveal">
+    <div class="auth__photo">
+      <figure class="slot" data-code="L6" data-note="로그인 — 지중해 빌라 야외 소파">
+        <img src="assets/img/L6.jpg" alt="" loading="lazy" onerror="this.remove()">
+      </figure>
+    </div>
+    <div class="auth__body">
+      <p class="label">Entrance</p>
+      <p style="font-size:var(--fs-small); line-height:1.7; margin-bottom:20px">ENTER YOUR EMAIL ADDRESS TO SIGN IN OR CREATE AN ACCOUNT</p>
+      <div class="field"><input type="email" placeholder="Email"></div>
+      <button class="btn btn--outline">CONTINUE</button>
+      <div class="auth__social">
+        <p class="label" style="margin:14px 0 4px">You can also sign in with</p>
+        <button class="btn btn--outline">CONTINUE WITH FACEBOOK</button>
+        <button class="btn btn--outline">CONTINUE WITH APPLE</button>
+        <button class="btn btn--outline">CONTINUE WITH GOOGLE</button>
+      </div>
+      <p class="auth__note">By signing in with my social media credentials, I agree to associate my account with them in accordance with the <a class="link-underline" href="#">Privacy Policy</a>.</p>
+    </div>
+  </section>
+
+  <!-- ===== Dashboard ===== -->
+  <main class="container account">
+    <aside>
+      <h1 class="account__title serif">Acco<em>unt</em></h1>
+      <ul class="account__nav">
+        <li><a class="is-active" href="#">Review</a></li>
+        <li><a href="#">Orders</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Addresses</a></li>
+        <li><a href="#wishlist">Wishlist</a></li>
+        <li><a href="#">Help</a></li>
+        <li><a href="#">Exit</a></li>
+      </ul>
+    </aside>
+
+    <div>
+      <div class="account__grid">
+        <div class="account__card">
+          <h4>Welcome, Sofia!</h4>
+          <p>We are glad to see you again.<br>Your last visit was April 5, 2026.</p>
+          <button class="btn btn--outline">EDIT PROFILE</button>
+        </div>
+        <div class="account__photo">
+          <figure class="slot" data-code="L6" data-note="대시보드 — 풀사이드 소파 컷">
+            <img src="assets/img/L6.jpg" alt="" loading="lazy" onerror="this.remove()">
+          </figure>
+        </div>
+        <div class="account__card">
+          <h4>Your last orders</h4>
+          <p>
+            Order NRPB-24631 &middot; Dated April 5, 2026 &middot; Amount: $ 3400<br>
+            Order NRPB-93172 &middot; Dated March 12, 2026 &middot; Amount: $ 1250
+          </p>
+          <a class="btn btn--outline" href="catalog.html">CHECK OUT OUR PRODUCTS</a>
+        </div>
+        <div class="account__card">
+          <h4>Need help?</h4>
+          <p>The customer care of MILANAIRE center is available by phone or email 24/7.</p>
+          <button class="btn btn--outline" style="margin-bottom:10px">CONTACT US BY EMAIL</button>
+          <button class="btn btn--outline">CHAT WITH US</button>
+        </div>
+      </div>
+
+      <!-- ===== Wishlist ===== -->
+      <section id="wishlist" style="margin-top:var(--sp-5)">
+        <div class="section__head">
+          <h2 class="section__title serif" style="font-size:var(--fs-h3)">&#9825; Wish<em>list</em></h2>
+          <a class="link-underline" href="#">Clear Favorites</a>
+        </div>
+        <p class="label" style="margin-bottom:var(--sp-3)">In stock (7)</p>
+        <div class="wishlist-grid" data-stagger>
+          <article class="pcard">
+            <div class="pcard__media">
+              <figure class="slot slot--product slot--contain" data-code="P3" data-note="Bordone">
+                <img src="assets/img/P3.jpg" alt="" loading="lazy" onerror="this.remove()">
+              </figure>
+              <button class="pcard__wish is-active">&#9829;</button>
+            </div>
+            <div class="pcard__info">
+              <div>
+                <div class="pcard__name">BORDONE</div>
+                <div class="pcard__price">$ 1420</div>
+              </div>
+              <a class="link-underline pcard__cart" href="#" data-add-cart>Add to cart</a>
+            </div>
+          </article>
+          <article class="pcard">
+            <div class="pcard__media">
+              <figure class="slot slot--product slot--contain" data-code="P8" data-note="Astrella">
+                <img src="assets/img/P8.jpg" alt="" loading="lazy" onerror="this.remove()">
+              </figure>
+              <button class="pcard__wish is-active">&#9829;</button>
+            </div>
+            <div class="pcard__info">
+              <div>
+                <div class="pcard__name">ASTRELLA</div>
+                <div class="pcard__price">$ 690</div>
+              </div>
+              <a class="link-underline pcard__cart" href="#" data-add-cart>Add to cart</a>
+            </div>
+          </article>
+          <article class="pcard">
+            <div class="pcard__media">
+              <figure class="slot slot--product slot--contain" data-code="P10" data-note="Velluta">
+                <img src="assets/img/P10.jpg" alt="" loading="lazy" onerror="this.remove()">
+              </figure>
+              <button class="pcard__wish is-active">&#9829;</button>
+            </div>
+            <div class="pcard__info">
+              <div>
+                <div class="pcard__name">VELLUTA</div>
+                <div class="pcard__price">$ 660</div>
+              </div>
+              <a class="link-underline pcard__cart" href="#" data-add-cart>Add to cart</a>
+            </div>
+          </article>
+          <article class="pcard">
+            <div class="pcard__media">
+              <figure class="slot slot--product slot--contain" data-code="P9" data-note="Verona">
+                <img src="assets/img/P9.jpg" alt="" loading="lazy" onerror="this.remove()">
+              </figure>
+              <button class="pcard__wish is-active">&#9829;</button>
+            </div>
+            <div class="pcard__info">
+              <div>
+                <div class="pcard__name">VERONA</div>
+                <div class="pcard__price">$ 760</div>
+              </div>
+              <a class="link-underline pcard__cart" href="#" data-add-cart>Add to cart</a>
+            </div>
+          </article>
+          <article class="pcard">
+            <div class="pcard__media">
+              <figure class="slot slot--product slot--contain" data-code="P12" data-note="Semi White">
+                <img src="assets/img/P12.jpg" alt="" loading="lazy" onerror="this.remove()">
+              </figure>
+              <button class="pcard__wish is-active">&#9829;</button>
+            </div>
+            <div class="pcard__info">
+              <div>
+                <div class="pcard__name">SEMI WHITE</div>
+                <div class="pcard__price">$ 360</div>
+              </div>
+              <a class="link-underline pcard__cart" href="#" data-add-cart>Add to cart</a>
+            </div>
+          </article>
+          <article class="pcard">
+            <div class="pcard__media">
+              <figure class="slot slot--product slot--contain" data-code="P11" data-note="Parata">
+                <img src="assets/img/P11.jpg" alt="" loading="lazy" onerror="this.remove()">
+              </figure>
+              <button class="pcard__wish is-active">&#9829;</button>
+            </div>
+            <div class="pcard__info">
+              <div>
+                <div class="pcard__name">PARATA</div>
+                <div class="pcard__price">$ 820</div>
+              </div>
+              <a class="link-underline pcard__cart" href="#" data-add-cart>Add to cart</a>
+            </div>
+          </article>
+          <article class="pcard">
+            <div class="pcard__media">
+              <figure class="slot slot--product slot--contain" data-code="P2" data-note="Ludo Marble">
+                <img src="assets/img/P2.jpg" alt="" loading="lazy" onerror="this.remove()">
+              </figure>
+              <button class="pcard__wish is-active">&#9829;</button>
+            </div>
+            <div class="pcard__info">
+              <div>
+                <div class="pcard__name">LUDO MARBLE</div>
+                <div class="pcard__price">$ 1160</div>
+              </div>
+              <a class="link-underline pcard__cart" href="#" data-add-cart>Add to cart</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__wordmark">MILANAIRE</div>
+    <div class="footer__bottom">
+      <span>&copy; Milanaire</span>
+      <div class="footer__bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+      <span>Site by J AI Studio</span>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/scroll.js"></script>
+</body>
+</html>

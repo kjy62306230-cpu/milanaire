@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products — MILANAIRE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__inner">
+      <nav class="header__nav">
+        <a href="index.html">Rooms</a>
+        <a href="#" data-overlay="menu">Products</a>
+        <a href="#">Projects</a>
+        <a href="#">Magazine</a>
+      </nav>
+      <button class="header__burger" data-overlay="menu" aria-label="menu">&#9776;</button>
+      <a class="header__logo" href="index.html">milanaire</a>
+      <div class="header__actions">
+        <button data-overlay="search">Search</button>
+        <a href="account.html">Account</a>
+        <a href="account.html#wishlist">Favorites</a>
+        <button data-overlay="cart">Cart (<span data-cart-count>0</span>)</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title serif">Pro<em>ducts</em></h1>
+
+    <div class="toolbar">
+      <div class="chips">
+        <button class="is-active">All</button>
+        <button>Tables</button>
+        <button>Armchairs</button>
+        <button>Sofas</button>
+        <button>Kitchen</button>
+        <button>Cabinets</button>
+        <button>Wardrobes</button>
+        <button>Beds</button>
+        <button>Lighting</button>
+        <button>Accessories</button>
+      </div>
+      <div class="toolbar__right">
+        <button>Filter &#9881;</button>
+        <button>Sort by &#8964;</button>
+      </div>
+    </div>
+
+    <!-- Grid 1 -->
+    <div class="grid-3" data-stagger>
+      <article class="pcard">
+        <a class="pcard__media" href="product.html">
+          <figure class="slot slot--product slot--contain" data-code="P5" data-note="Ludo — 다크 우드 콘솔">
+            <img src="assets/img/P5.jpg" alt="Ludo console" loading="lazy" onerror="this.remove()">
+          </figure>
+        </a>
+        <button class="pcard__wish" aria-label="wishlist">&#9825;</button>
+        <div class="pcard__info">
+          <div>
+            <div class="pcard__name">LUDO <span class="pcard__designer">Dara &amp; Ansel Complements</span></div>
+            <div class="pcard__price">$ 870</div>
+          </div>
+          <a class="link-underline pcard__cart" href="#" data-add-cart>Add to cart</a>
+        </div>
+      </article>
+      <article class="pcard">
+        <a class="pcard__media" href="product.html">
+          <figure class="slot slot--product slot--contain" data-code="P6" data-note="Piuma — 부채꼴 공작 암체어">
+            <img src="assets/img/P6.jpg" alt="Piuma armchair" loading="lazy" onerror="this.remove()">
+          </figure>
+        </a>
+        <button class="pcard__wish" aria-label="wishlist">&#9825;</button>
+        <div class="pcard__info">
+          <div>
+            <div class="pcard__name">PIUMA ARMCHAIR <span class="pcard__designer">Marco Alfieri Armchairs</span></div>
+            <div class="pcard__price">$ 750</div>
+          </div>
+          <a class="link-underline pcard__cart" href="#" data-add-cart>Add to cart</a>
+        </div>
+      </article>
+      <article class="pcard">
+        <a class="pcard__media" href="product.html">
+          <figure class="slot slot--product slot--contain" data-code="P7" data-note="Leone — 플루티드 사이드보드">
+            <img src="assets/img/P7.jpg" alt="Leone sideboard" loading="lazy" onerror="this.remove()">
+          </figure>
+        </a>
+        <button class="pcard__wish" aria-label="wishlist">&#9825;</button>
+        <div class="pcard__info">
+          <div>
+            <div class="pcard__name">LEONE <span class="pcard__designer">Andrea Morelli Storage unit</span></div>
+            <div class="pcard__price">$ 980</div>
+          </div>
+          <a class="link-underline pcard__cart" href="#" data-add-cart>Add to cart</a>
+        </div>
+      </article>
+      <article class="pcard">
+        <a class="pcard__media" href="product.html">
+          <figure class="slot slot--product slot--contain" data-code="P10" data-note="Velluta — 화이트 부클레 라운지체어">
+            <img src="assets/img/P10.jpg" alt="Velluta armchair" loading="lazy" onerror="this.remove()">
+          </figure>
+        </a>
+        <button class="pcard__wish" aria-label="wishlist">&#9825;</button>
+        <div class="pcard__info">
+          <div>
+            <div class="pcard__name">VELLUTA <span class="pcard__designer">Studiovera Armchairs</span></div>
+            <div class="pcard__price">$ 760</div>
+          </div>
+          <a class="link-underline pcard__cart" href="#" data-add-cart>Add to cart</a>
+        </div>
+      </article>
+      <article class="pcard">
+        <a class="pcard__media" href="product.html">
+          <figure class="slot slot--product slot--contain" data-code="P4" data-note="Bassano — 크림 패브릭 베드">
+            <img src="assets/img/P4.jpg" alt="Bassano bed" loading="lazy" onerror="this.remove()">
+          </figure>
+        </a>
+        <button class="pcard__wish" aria-label="wishlist">&#9825;</button>
+        <div class="pcard__info">
+          <div>
+            <div class="pcard__name">BASSANO <span class="pcard__designer">Matteo Lombardi Beds</span></div>
+            <div class="pcard__price">$ 1280</div>
+          </div>
+          <a class="link-underline pcard__cart" href="#" data-add-cart>Add to cart</a>
+        </div>
+      </article>
+      <article class="pcard">
+        <a class="pcard__media" href="product.html">
+          <figure class="slot slot--product slot--contain" data-code="P12" data-note="Semi White — 세라믹 화병 세트">
+            <img src="assets/img/P12.jpg" alt="Semi White vases" loading="lazy" onerror="this.remove()">
+          </figure>
+        </a>
+        <button class="pcard__wish" aria-label="wishlist">&#9825;</button>
+        <div class="pcard__info">
+          <div>
+            <div class="pcard__name">SEMI WHITE <span class="pcard__designer">Ceramica Notte 1931 Accessories</span></div>
+            <div class="pcard__price">$ 360</div>
+          </div>
+          <a class="link-underline pcard__cart" href="#" data-add-cart>Add to cart</a>
+        </div>
+      </article>
+    </div>
+
+    <!-- Shoppable break -->
+    <section class="shoppable reveal" style="margin: var(--sp-5) 0">
+      <figure class="slot" data-code="L3" data-note="쇼퍼블 라이브러리 월 — 백라이트 선반">
+        <img src="assets/img/L3.jpg" alt="Library wall" loading="lazy" onerror="this.remove()">
+      </figure>
+      <button class="hotspot" style="left:24%; top:30%" data-pop="cpop1">+</button>
+      <button class="hotspot" style="left:56%; top:52%" data-pop="cpop2">+</button>
+      <button class="hotspot" style="right:18%; top:24%" data-pop="cpop3">+</button>
+      <div class="hotspot__pop" id="cpop1" style="left:27%; top:36%">
+        <figure class="slot slot--product slot--contain" data-code="P14" data-note="">
+          <img src="assets/img/P14.jpg" alt="" loading="lazy" onerror="this.remove()">
+        </figure>
+        <div class="hotspot__pop-row"><span>SIMONETTO<br>$ 2560</span><a class="link-underline" href="#" data-add-cart>Add to cart</a></div>
+      </div>
+      <div class="hotspot__pop" id="cpop2" style="left:59%; top:58%">
+        <figure class="slot slot--product slot--contain" data-code="P13" data-note="">
+          <img src="assets/img/P13.jpg" alt="" loading="lazy" onerror="this.remove()">
+        </figure>
+        <div class="hotspot__pop-row"><span>ZIA DECO<br>$ 570</span><a class="link-underline" href="#" data-add-cart>Add to cart</a></div>
+      </div>
+      <div class="hotspot__pop" id="cpop3" style="right:14%; top:30%">
+        <figure class="slot slot--product slot--contain" data-code="P11" data-note="">
+          <img src="assets/img/P11.jpg" alt="" loading="lazy" onerror="this.remove()">
+        </figure>
+        <div class="hotspot__pop-row"><span>SATURNIA<br>$ 1070</span><a class="link-underline" href="#" data-add-cart>Add to cart</a></div>
+      </div>
+    </section>
+
+    <!-- Grid 2 -->
+    <div class="grid-3" data-stagger>
+      <article class="pcard">
+        <a class="pcard__media" href="product.html">
+          <figure class="slot slot--product slot--contain" data-code="P1" data-note="Nodo — 매듭 부클레 암체어">
+            <img src="assets/img/P1.jpg" alt="Nodo armchair" loading="lazy" onerror="this.remove()">
+          </figure>
+        </a>
+        <button class="pcard__wish" aria-label="wishlist">&#9825;</button>
+        <div class="pcard__info">
+          <div>
+            <div class="pcard__name">NODO <span class="pcard__designer">Studiovera Armchairs</span></div>
+            <div class="pcard__price">$ 760</div>
+          </div>
+          <a class="link-underline pcard__cart" href="#" data-add-cart>Add to cart</a>
+        </div>
+      </article>
+      <article class="pcard">
+        <a class="pcard__media" href="product.html">
+          <figure class="slot slot--product slot--contain" data-code="P8" data-note="Astrella — 오닉스 세일 조명">
+            <img src="assets/img/P8.jpg" alt="Astrella lamp" loading="lazy" onerror="this.remove()">
+          </figure>
+        </a>
+        <button class="pcard__wish" aria-label="wishlist">&#9825;</button>
+        <div class="pcard__info">
+          <div>
+            <div class="pcard__name">ASTRELLA <span class="pcard__designer">Andrea Morelli Lighting</span></div>
+            <div class="pcard__price">$ 660</div>
+          </div>
+          <a class="link-underline pcard__cart" href="#" data-add-cart>Add to cart</a>
+        </div>
+      </article>
+      <article class="pcard">
+        <a class="pcard__media" href="product.html">
+          <figure class="slot slot--product slot--contain" data-code="P9" data-note="Verona — 오가닉 브론즈 커피 테이블">
+            <img src="assets/img/P9.jpg" alt="Verona table" loading="lazy" onerror="this.remove()">
+          </figure>
+        </a>
+        <button class="pcard__wish" aria-label="wishlist">&#9825;</button>
+        <div class="pcard__info">
+          <div>
+            <div class="pcard__name">VERONA <span class="pcard__designer">Studio Nord Outdoor</span></div>
+            <div class="pcard__price">$ 760</div>
+          </div>
+          <a class="link-underline pcard__cart" href="#" data-add-cart>Add to cart</a>
+        </div>
+      </article>
+      <article class="pcard">
+        <a class="pcard__media" href="product.html">
+          <figure class="slot slot--product slot--contain" data-code="P3" data-note="Bordone — 아이보리 모듈 소파">
+            <img src="assets/img/P3.jpg" alt="Bordone sofa" loading="lazy" onerror="this.remove()">
+          </figure>
+        </a>
+        <button class="pcard__wish" aria-label="wishlist">&#9825;</button>
+        <div class="pcard__info">
+          <div>
+            <div class="pcard__name">BORDONE <span class="pcard__designer">Bonetta Sofas</span></div>
+            <div class="pcard__price">$ 1420</div>
+          </div>
+          <a class="link-underline pcard__cart" href="#" data-add-cart>Add to cart</a>
+        </div>
+      </article>
+      <article class="pcard">
+        <a class="pcard__media" href="product.html">
+          <figure class="slot slot--product slot--contain" data-code="P14" data-note="Simonetto — 다크 스토리지">
+            <img src="assets/img/P14.jpg" alt="Simonetto storage" loading="lazy" onerror="this.remove()">
+          </figure>
+        </a>
+        <button class="pcard__wish" aria-label="wishlist">&#9825;</button>
+        <div class="pcard__info">
+          <div>
+            <div class="pcard__name">SIMONETTO <span class="pcard__designer">Cielo Storage unit</span></div>
+            <div class="pcard__price">$ 2560</div>
+          </div>
+          <a class="link-underline pcard__cart" href="#" data-add-cart>Add to cart</a>
+        </div>
+      </article>
+      <article class="pcard">
+        <a class="pcard__media" href="product.html">
+          <figure class="slot slot--product slot--contain" data-code="P15" data-note="Monolito Raw — 월넛 우드 볼">
+            <img src="assets/img/P15.jpg" alt="Monolito Raw bowls" loading="lazy" onerror="this.remove()">
+          </figure>
+        </a>
+        <button class="pcard__wish" aria-label="wishlist">&#9825;</button>
+        <div class="pcard__info">
+          <div>
+            <div class="pcard__name">MONOLITO RAW <span class="pcard__designer">Roberto Riva Accessories</span></div>
+            <div class="pcard__price">$ 650</div>
+          </div>
+          <a class="link-underline pcard__cart" href="#" data-add-cart>Add to cart</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="loadmore"><a class="link-arrow" href="#">LOAD MORE</a></div>
+    <div class="pagination">
+      <a class="is-active" href="#">1</a><a href="#">2</a><a href="#">3</a><span>&hellip;</span><a href="#">12</a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__wordmark">MILANAIRE</div>
+    <div class="footer__bottom">
+      <span>&copy; Milanaire</span>
+      <div class="footer__bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+      <span>Site by J AI Studio</span>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/scroll.js"></script>
+</body>
+</html>
