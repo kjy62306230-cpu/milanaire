@@ -640,3 +640,24 @@ input, textarea, select { font: inherit; color: inherit; }
   .insta__scatter--2, .insta__scatter--7 { display: none; }
 }
 .header__burger { display: none; }
+
+
+/* ---------- Spacing polish ---------- */
+.shoppable { margin-top: var(--sp-6); margin-bottom: var(--sp-6); }
+.rooms { margin: var(--sp-6) 0; }
+.pdp__video { margin: var(--sp-6) 0; }
+.designer { margin: var(--sp-6) 0; }
+.pdp__left { padding-top: var(--sp-5); padding-bottom: var(--sp-5); }
+.pdp__about { margin-top: var(--sp-5); }
+.grid-3 { row-gap: 56px; }
+.grid-5 { row-gap: 40px; }
+.wishlist-grid { row-gap: 40px; }
+.section__head + .grid-3 { margin-top: var(--sp-2); }
+.toolbar { margin-top: var(--sp-2); }
+.auth { margin-top: var(--sp-6); margin-bottom: var(--sp-6); }
+.account { padding-top: var(--sp-6); }
+.footer__cols { padding-top: var(--sp-2); }
+@media (max-width: 720px){
+  .shoppable, .rooms, .pdp__video, .designer { margin-top: var(--sp-5); margin-bottom: var(--sp-5); }
+  .grid-3 { row-gap: 40px; }
+}
