@@ -27,22 +27,22 @@ const megaMenuHTML = `
       <div class="mega__tiles">
         <a class="mega__tile" href="catalog.html">
           <figure class="slot" data-code="L5" data-note="mega menu — sofas">
-            <img src="${IMG}L5.jpg" alt="" loading="lazy" onerror="this.remove()">
+            <img src="${IMG}L5.jpg?w=2" alt="" loading="lazy" onerror="this.remove()">
           </figure><span>Sofas</span>
         </a>
         <a class="mega__tile" href="catalog.html">
           <figure class="slot" data-code="L6" data-note="mega menu — armchairs">
-            <img src="${IMG}L6.jpg" alt="" loading="lazy" onerror="this.remove()">
+            <img src="${IMG}L6.jpg?w=2" alt="" loading="lazy" onerror="this.remove()">
           </figure><span>Armchairs</span>
         </a>
         <a class="mega__tile" href="catalog.html">
           <figure class="slot" data-code="L1" data-note="mega menu — beds">
-            <img src="${IMG}L1.jpg" alt="" loading="lazy" onerror="this.remove()">
+            <img src="${IMG}L1.jpg?w=2" alt="" loading="lazy" onerror="this.remove()">
           </figure><span>Beds</span>
         </a>
         <a class="mega__tile" href="catalog.html">
           <figure class="slot" data-code="L2" data-note="mega menu — tables">
-            <img src="${IMG}L2.jpg" alt="" loading="lazy" onerror="this.remove()">
+            <img src="${IMG}L2.jpg?w=2" alt="" loading="lazy" onerror="this.remove()">
           </figure><span>Tables</span>
         </a>
       </div>
@@ -54,7 +54,7 @@ const searchCard = (code, name, designer, price) => `
 <article class="pcard">
   <div class="pcard__media">
     <figure class="slot slot--product slot--contain" data-code="${code}" data-note="${name}">
-      <img src="${IMG}${code}.jpg" alt="${name}" loading="lazy" onerror="this.remove()">
+      <img src="${IMG}${code}.jpg?w=2" alt="${name}" loading="lazy" onerror="this.remove()">
     </figure>
     <button class="pcard__wish" aria-label="wishlist">&#9825;</button>
   </div>
@@ -97,7 +97,7 @@ const cartHTML = `
   <div class="drawer__items">
     <div class="cart-item">
       <figure class="slot slot--product slot--contain" data-code="P6" data-note="Piuma">
-        <img src="${IMG}P6.jpg" alt="Piuma" onerror="this.remove()">
+        <img src="${IMG}P6.jpg?w=2" alt="Piuma" onerror="this.remove()">
       </figure>
       <div class="cart-item__body">
         <div class="cart-item__name">PIUMA</div>
@@ -111,7 +111,7 @@ const cartHTML = `
     </div>
     <div class="cart-item">
       <figure class="slot slot--product slot--contain" data-code="P5" data-note="Ludo console">
-        <img src="${IMG}P5.jpg" alt="Ludo" onerror="this.remove()">
+        <img src="${IMG}P5.jpg?w=2" alt="Ludo" onerror="this.remove()">
       </figure>
       <div class="cart-item__body">
         <div class="cart-item__name">LUDO</div>
