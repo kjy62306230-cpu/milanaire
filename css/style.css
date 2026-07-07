@@ -665,3 +665,10 @@ input, textarea, select { font: inherit; color: inherit; }
 .section.container { padding: var(--sp-6) var(--gutter); }
 /* cap hero height (also fixes tall-viewport captures) */
 .hero__media { height: min(calc(100vh - var(--nav-h)), 900px); }
+/* mobile header cleanup: burger + logo + cart only */
+@media (max-width: 720px){
+  .header__actions { gap: 12px; }
+  .header__actions [data-overlay="search"], .header__actions a[href*="account"] { display: none; }
+  .lang-sw { margin-left: 6px; gap: 0; }
+  .lang-sw button { padding: 3px 4px; font-size: 9px; letter-spacing: .04em; }
+}
