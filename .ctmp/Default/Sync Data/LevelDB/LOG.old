@@ -1,3 +1,3 @@
-2026/07/07-17:47:10.072 e420 Reusing MANIFEST C:\mgit\.ctmp\Default\Sync Data\LevelDB/MANIFEST-000001
-2026/07/07-17:47:10.074 e420 Recovering log #3
-2026/07/07-17:47:10.076 e420 Reusing old log C:\mgit\.ctmp\Default\Sync Data\LevelDB/000003.log 
+2026/07/07-19:02:40.815 7384 Reusing MANIFEST C:\mgit\.ctmp\Default\Sync Data\LevelDB/MANIFEST-000001
+2026/07/07-19:02:40.818 7384 Recovering log #3
+2026/07/07-19:02:40.821 7384 Reusing old log C:\mgit\.ctmp\Default\Sync Data\LevelDB/000003.log 
