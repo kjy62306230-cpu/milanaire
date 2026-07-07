@@ -5,18 +5,16 @@
 <title>MILANAIRE — Portfolio Deck</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-:root{--ivory:#F4F2ED;--dark:#141311;--ink:#1A1A1A;--serif:'Cormorant Garamond',serif;--sans:'Helvetica Neue','Inter',sans-serif}
+:root{--ivory:#F4F2ED;--dark:#141311;--ink:#1A1A1A;--acc:#8a6f4d;--serif:'Cormorant Garamond',serif;--sans:'Helvetica Neue','Inter',sans-serif}
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:var(--ivory);font-family:var(--sans);color:var(--ink);width:1400px}
 .slide{width:1400px;position:relative;overflow:hidden;display:none}
 .slide.on{display:block}
-/* corner captions */
 .cap{position:absolute;top:44px;left:56px;right:56px;display:flex;justify-content:space-between;z-index:9;pointer-events:none}
 .cap span{font-family:var(--serif);font-size:26px;font-weight:500}
 .cap em{font-style:italic}
 .cap.inv span{color:var(--ivory)}
 .kick{font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-family:var(--sans)!important;color:rgba(26,26,26,.6)}
-/* frame holder (iframe scaled) */
 .hold{position:relative;margin:130px auto 90px;box-shadow:0 40px 110px rgba(0,0,0,.14);overflow:hidden;background:#fff}
 .hold iframe{border:0;transform-origin:top left;pointer-events:none}
 /* S1 cover */
@@ -27,7 +25,7 @@ body{background:var(--ivory);font-family:var(--sans);color:var(--ink);width:1400
 #s1 .photo .wm{position:absolute;top:26px;left:0;right:0;text-align:center;font-family:var(--serif);font-weight:500;font-size:96px;color:#fff;mix-blend-mode:screen;letter-spacing:.02em}
 #s1 .goal{margin:64px auto 0;max-width:560px;text-align:center;font-size:12px;letter-spacing:.12em;text-transform:uppercase;line-height:2.1;color:rgba(26,26,26,.75)}
 #s1 .dome{position:absolute;left:-50%;right:-50%;bottom:-560px;height:1000px;border-radius:50% 50% 0 0/38% 38% 0 0;background:linear-gradient(145deg,#2B2926,#1E1D1B 55%,#141311)}
-/* S2 about dark */
+/* S2 about */
 #s2{height:980px;background:linear-gradient(145deg,#2B2926,#1E1D1B 55%,#141311);color:var(--ivory)}
 #s2 .inner{padding:120px 90px}
 #s2 h2{font-family:var(--serif);font-weight:500;font-size:44px;margin-bottom:56px}
@@ -36,14 +34,13 @@ body{background:var(--ivory);font-family:var(--sans);color:var(--ink);width:1400
 #s2 .thumbs img{height:190px;object-fit:cover;display:block}
 #s2 .cols{display:grid;grid-template-columns:1fr 1fr 1.6fr;gap:60px;font-size:12.5px;line-height:2;color:rgba(244,242,237,.75)}
 #s2 .cols b{display:block;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:rgba(244,242,237,.5);margin-bottom:14px;font-weight:400}
-/* dark slides */
 .darkbg{background:linear-gradient(145deg,#2B2926,#1E1D1B 55%,#141311)}
 /* mobile trio */
 #s11{height:1150px}
 #s11 .row{display:flex;gap:70px;justify-content:center;margin-top:170px}
 .phone{width:330px;height:715px;border-radius:38px;overflow:hidden;position:relative;box-shadow:0 30px 80px rgba(0,0,0,.18);background:#fff}
 .phone iframe{width:390px;height:845px;transform:scale(.846);transform-origin:top left;border:0;pointer-events:none}
-/* typography slide */
+/* typography */
 #s12{height:900px}
 #s12.on{display:flex}
 #s12 .half{width:50%;padding:110px 80px;display:flex;flex-direction:column;justify-content:flex-end}
@@ -61,6 +58,38 @@ body{background:var(--ivory);font-family:var(--sans);color:var(--ink);width:1400
 #s14 .tx em{font-style:italic;display:block;font-size:80px}
 #s14 .strip{position:absolute;left:0;right:0;bottom:0;height:190px;background:var(--ivory);display:flex;align-items:center;justify-content:space-between;padding:0 90px;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;line-height:1.9;color:rgba(26,26,26,.7)}
 #s14 .strip b{display:block;color:var(--ink);font-weight:500}
+/* S15 multilingual */
+#s15{height:2400px}
+#s15 .head{text-align:center;padding:110px 100px 70px}
+#s15 h2{font-family:var(--serif);font-weight:500;font-size:56px;line-height:1.15}
+#s15 h2 em{font-style:italic}
+#s15 h2 .a{color:var(--acc)}
+#s15 .sub{margin:26px auto 0;max-width:620px;font-size:14px;line-height:1.9;color:rgba(26,26,26,.65)}
+#s15 .cols3{display:flex;gap:48px;justify-content:center}
+#s15 .colw{position:relative}
+#s15 .badge{position:absolute;top:-46px;left:0;background:var(--dark);color:var(--ivory);font-size:11px;letter-spacing:.1em;padding:8px 16px;border-radius:20px}
+#s15 .pagecol{width:380px;height:1860px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.16);background:#fff}
+#s15 .pagecol iframe{width:1440px;height:7050px;transform:scale(.2639);transform-origin:top left;border:0;pointer-events:none}
+/* S16 problem/solution */
+#s16{height:1060px}
+#s16 .lab{position:absolute;top:44px;left:56px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--acc)}
+#s16 .row{display:grid;grid-template-columns:1fr 1fr;gap:70px;padding:150px 90px 0;align-items:center}
+#s16 .row.r2{padding-top:90px}
+#s16 img{width:100%;height:360px;object-fit:cover;display:block;box-shadow:0 26px 70px rgba(0,0,0,.14)}
+#s16 b.t{display:block;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:rgba(26,26,26,.45);margin-bottom:18px;font-weight:400}
+#s16 p{font-size:17px;line-height:1.9}
+#s16 p .hl{color:var(--acc)}
+/* S17 details */
+#s17{height:860px}
+#s17 .lab{position:absolute;top:44px;left:56px;font-family:var(--serif);font-size:26px}
+#s17 .lab em{font-style:italic}
+#s17 h2{font-family:var(--serif);font-weight:500;font-size:50px;text-align:center;padding:150px 0 60px}
+#s17 h2 em{font-style:italic}
+#s17 .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;padding:0 90px}
+#s17 .card{border:1px solid rgba(26,26,26,.14);padding:34px 26px;background:#fff}
+#s17 .card b{display:block;font-family:var(--serif);font-size:26px;font-weight:500;margin-bottom:16px}
+#s17 .card p{font-size:13px;line-height:1.85;color:rgba(26,26,26,.65)}
+#s17 .foot{text-align:center;margin-top:56px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(26,26,26,.5)}
 </style>
 </head>
 <body>
@@ -93,11 +122,11 @@ body{background:var(--ivory);font-family:var(--sans);color:var(--ink);width:1400
   </div>
 </section>
 
-<!-- S3 HOME DESKTOP -->
+<!-- S3 HOME -->
 <section class="slide" id="s3" style="height:2620px">
   <div class="cap"><span>Home <em>page</em></span><span><em>Desktop</em></span></div>
   <div class="hold" style="width:1160px;height:2400px">
-    <iframe src="index.html" style="width:1440px;height:2980px;transform:scale(.8056)"></iframe>
+    <iframe src="index.html?still=1" style="width:1440px;height:2980px;transform:scale(.8056)"></iframe>
   </div>
 </section>
 
@@ -105,7 +134,7 @@ body{background:var(--ivory);font-family:var(--sans);color:var(--ink);width:1400
 <section class="slide darkbg" id="s4" style="height:1160px">
   <div class="cap inv"><span>Menu</span><span><em>Desktop</em></span></div>
   <div class="hold" style="width:1160px;height:900px">
-    <iframe src="index.html?open=menu" style="width:1440px;height:1118px;transform:scale(.8056)"></iframe>
+    <iframe src="index.html?open=menu&still=1" style="width:1440px;height:1118px;transform:scale(.8056)"></iframe>
   </div>
 </section>
 
@@ -113,7 +142,7 @@ body{background:var(--ivory);font-family:var(--sans);color:var(--ink);width:1400
 <section class="slide darkbg" id="s5" style="height:1160px">
   <div class="cap inv"><span>Search</span><span><em>Desktop</em></span></div>
   <div class="hold" style="width:1160px;height:900px">
-    <iframe src="index.html?open=search" style="width:1440px;height:1118px;transform:scale(.8056)"></iframe>
+    <iframe src="index.html?open=search&still=1" style="width:1440px;height:1118px;transform:scale(.8056)"></iframe>
   </div>
 </section>
 
@@ -121,7 +150,7 @@ body{background:var(--ivory);font-family:var(--sans);color:var(--ink);width:1400
 <section class="slide" id="s6" style="height:2620px">
   <div class="cap"><span>Cata<em>log</em></span><span><em>Desktop</em></span></div>
   <div class="hold" style="width:1160px;height:2400px">
-    <iframe src="catalog.html" style="width:1440px;height:2980px;transform:scale(.8056)"></iframe>
+    <iframe src="catalog.html?still=1" style="width:1440px;height:2980px;transform:scale(.8056)"></iframe>
   </div>
 </section>
 
@@ -129,7 +158,7 @@ body{background:var(--ivory);font-family:var(--sans);color:var(--ink);width:1400
 <section class="slide" id="s7" style="height:2620px">
   <div class="cap"><span>Product <em>card</em></span><span><em>Desktop</em></span></div>
   <div class="hold" style="width:1160px;height:2400px">
-    <iframe src="product.html" style="width:1440px;height:2980px;transform:scale(.8056)"></iframe>
+    <iframe src="product.html?still=1" style="width:1440px;height:2980px;transform:scale(.8056)"></iframe>
   </div>
 </section>
 
@@ -137,7 +166,7 @@ body{background:var(--ivory);font-family:var(--sans);color:var(--ink);width:1400
 <section class="slide darkbg" id="s8" style="height:1160px">
   <div class="cap inv"><span>Bas<em>ket</em></span><span><em>Desktop</em></span></div>
   <div class="hold" style="width:1160px;height:900px">
-    <iframe src="index.html?open=cart" style="width:1440px;height:1118px;transform:scale(.8056)"></iframe>
+    <iframe src="index.html?open=cart&still=1" style="width:1440px;height:1118px;transform:scale(.8056)"></iframe>
   </div>
 </section>
 
@@ -145,7 +174,7 @@ body{background:var(--ivory);font-family:var(--sans);color:var(--ink);width:1400
 <section class="slide" id="s9" style="height:1500px">
   <div class="cap"><span>The purch<em>asing</em></span><span><em>process</em></span></div>
   <div class="hold" style="width:1160px;height:1240px">
-    <iframe src="checkout.html" style="width:1440px;height:1540px;transform:scale(.8056)"></iframe>
+    <iframe src="checkout.html?still=1" style="width:1440px;height:1540px;transform:scale(.8056)"></iframe>
   </div>
 </section>
 
@@ -153,21 +182,21 @@ body{background:var(--ivory);font-family:var(--sans);color:var(--ink);width:1400
 <section class="slide" id="s10" style="height:2300px">
   <div class="cap"><span>Personal</span><span><em>account</em></span></div>
   <div class="hold" style="width:1160px;height:2080px">
-    <iframe src="account.html" style="width:1440px;height:2582px;transform:scale(.8056)"></iframe>
+    <iframe src="account.html?still=1" style="width:1440px;height:2582px;transform:scale(.8056)"></iframe>
   </div>
 </section>
 
-<!-- S11 MOBILE TRIO -->
+<!-- S11 MOBILE -->
 <section class="slide" id="s11">
   <div class="cap"><span>Home <em>page</em></span><span><em>Mobile</em></span></div>
   <div class="row">
-    <div class="phone"><iframe src="index.html"></iframe></div>
-    <div class="phone"><iframe src="catalog.html"></iframe></div>
-    <div class="phone"><iframe src="product.html"></iframe></div>
+    <div class="phone"><iframe src="index.html?still=1"></iframe></div>
+    <div class="phone"><iframe src="catalog.html?still=1"></iframe></div>
+    <div class="phone"><iframe src="product.html?still=1"></iframe></div>
   </div>
 </section>
 
-<!-- S12 TYPOGRAPHY -->
+<!-- S12 TYPO -->
 <section class="slide" id="s12">
   <div class="tl" style="z-index:5">Typo<em>graphy</em></div>
   <div class="half">
@@ -184,7 +213,7 @@ body{background:var(--ivory);font-family:var(--sans);color:var(--ink);width:1400
 <section class="slide" id="s13" style="height:1280px">
   <div class="cap"><span>404</span><span><em>Page</em></span></div>
   <div class="hold" style="width:1160px;height:1020px">
-    <iframe src="404.html" style="width:1440px;height:1266px;transform:scale(.8056)"></iframe>
+    <iframe src="404.html?still=1" style="width:1440px;height:1266px;transform:scale(.8056)"></iframe>
   </div>
 </section>
 
@@ -199,6 +228,62 @@ body{background:var(--ivory);font-family:var(--sans);color:var(--ink);width:1400
     <div><b>Milanaire</b>2026 — Concept</div>
     <div><b>Thank you</b>For watching</div>
   </div>
+</section>
+
+<!-- S15 MULTILINGUAL -->
+<section class="slide" id="s15">
+  <div class="head">
+    <h2>One build, <span class="a">four markets.</span><br>Full <em>i18n</em> out of the box.</h2>
+    <p class="sub">언어 토글 하나로 사이트 전체 카피가 한국어 · 영어 · 일본어 · 중국어로 전환됩니다.
+    브랜드 워드마크와 제품명은 그대로 유지되어 톤이 흔들리지 않습니다.</p>
+  </div>
+  <div class="cols3">
+    <div class="colw"><span class="badge">&#9679; 한국어</span>
+      <div class="pagecol"><iframe src="index.html?lang=ko&still=1"></iframe></div>
+    </div>
+    <div class="colw"><span class="badge">&#9679; English</span>
+      <div class="pagecol"><iframe src="index.html?lang=en&still=1"></iframe></div>
+    </div>
+    <div class="colw"><span class="badge">&#9679; 日本語</span>
+      <div class="pagecol"><iframe src="index.html?lang=ja&still=1"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<!-- S16 PROBLEM / SOLUTION -->
+<section class="slide" id="s16">
+  <div class="lab">&#9679; Problem &amp; Solution</div>
+  <div class="row">
+    <div>
+      <b class="t">Problem</b>
+      <p>럭셔리 브랜드 웹 프로젝트의 대부분은 <span class="hl">화려한 목업 이미지</span>로 끝납니다.
+      클릭되지 않는 디자인은 클라이언트에게 <span class="hl">완성 후의 모습</span>을 상상하게 만들 뿐,
+      확신을 주지 못합니다.</p>
+    </div>
+    <img src="assets/img/L4.jpg" alt="">
+  </div>
+  <div class="row r2">
+    <img src="assets/img/E1.jpg" alt="" style="height:360px">
+    <div>
+      <b class="t">Solution</b>
+      <p>MILANAIRE는 7개 페이지 전부가 <span class="hl">실제로 작동하는 라이브 빌드</span>입니다.
+      쇼퍼블 핫스팟, 메가 메뉴, 카트, 4개 국어 전환까지 —
+      보는 포트폴리오가 아니라 <span class="hl">직접 만져보는 포트폴리오</span>입니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- S17 DETAILS -->
+<section class="slide" id="s17">
+  <div class="lab">Small details, <em>big difference</em></div>
+  <h2>Every interaction, <em>working</em></h2>
+  <div class="cards">
+    <div class="card"><b>Shoppable</b><p>사진 위 + 핫스팟을 누르면 미니 상품카드가 떠오르고 바로 카트에 담깁니다.</p></div>
+    <div class="card"><b>Overlays</b><p>메가 메뉴 · 검색 · 카트 드로어가 모든 페이지에서 실제로 열리고 닫힙니다.</p></div>
+    <div class="card"><b>4 Languages</b><p>KO · EN · JA · ZH 전환 내장. 선택 언어는 저장되어 페이지 이동에도 유지됩니다.</p></div>
+    <div class="card"><b>Adaptive</b><p>1920 · 1024 · 390 — 데스크톱 멀티컬럼부터 모바일까지 전 구간 대응.</p></div>
+  </div>
+  <p class="foot">Live build · GSAP scroll motion · AI-generated art direction · GitHub Pages</p>
 </section>
 
 <script>

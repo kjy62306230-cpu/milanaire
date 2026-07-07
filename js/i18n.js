@@ -155,5 +155,5 @@ sw.className='lang-sw';
 sw.innerHTML='<button data-l="ko">KO</button><button data-l="en">EN</button><button data-l="ja">JA</button><button data-l="zh">ZH</button>';
 sw.addEventListener('click',e=>{const b=e.target.closest('button');if(b)setLang(b.dataset.l)});
 (document.querySelector('.header__actions')||document.body).appendChild(sw);
-setLang((()=>{try{return localStorage.getItem('ml-lang')}catch(e){return null}})()||'en');
+setLang(new URLSearchParams(location.search).get('lang')||(()=>{try{return localStorage.getItem('ml-lang')}catch(e){return null}})()||'en');
 })();

@@ -5,6 +5,7 @@
    ============================================ */
 
 (function () {
+  if (new URLSearchParams(location.search).has('still')) { var st=document.createElement('style'); st.textContent='.reveal,[data-stagger]>*{opacity:1!important;transform:none!important}'; document.head.appendChild(st); return; }
   const hasGsap = typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined';
 
   if (hasGsap) {
