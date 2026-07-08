@@ -1,3 +1,7 @@
 assets/img/_originals/
 _review/
 .git-broken/
+
+.ctmp
+.ctmp2
+.ctmp3
