@@ -143,17 +143,34 @@ function swapText(lang){
 function setLang(l){
   swapText(l);
   document.documentElement.lang=l;
-  document.querySelectorAll('.lang-sw button').forEach(b=>b.classList.toggle('is-on',b.dataset.l===l));
+  document.querySelectorAll('.lang-sw__menu button').forEach(b=>b.classList.toggle('is-on',b.dataset.l===l));
+  var cur=document.querySelector('.lang-sw__toggle .cur'); if(cur)cur.textContent=l.toUpperCase();
   try{if(!new URLSearchParams(location.search).has('still'))localStorage.setItem('ml-lang',l)}catch(e){}
 }
 /* switcher UI */
 const css=document.createElement('style');
-css.textContent='.lang-sw{display:flex;gap:2px;margin-left:18px}.lang-sw button{font-size:10px;letter-spacing:.08em;padding:4px 7px;color:var(--text-secondary)}.lang-sw button.is-on{color:var(--text-primary);text-decoration:underline;text-underline-offset:3px}@media(max-width:720px){.lang-sw{margin-left:8px}}';
+css.textContent=`
+.lang-sw{position:relative;margin-left:16px}
+.lang-sw__toggle{display:inline-flex;align-items:center;gap:6px;font:inherit;font-size:10px;letter-spacing:.09em;padding:7px 13px;color:var(--text-primary);border-radius:100px;background:rgba(255,255,255,.4);-webkit-backdrop-filter:blur(16px) saturate(1.6);backdrop-filter:blur(16px) saturate(1.6);border:1px solid rgba(255,255,255,.7);box-shadow:0 4px 16px rgba(0,0,0,.08),inset 0 1px 1px rgba(255,255,255,.85);cursor:pointer}
+.lang-sw__toggle .caret{font-size:7px;transition:transform .35s cubic-bezier(.4,0,.2,1)}
+.lang-sw.is-open .lang-sw__toggle .caret{transform:rotate(180deg)}
+.lang-sw__menu{position:absolute;top:calc(100% + 8px);right:0;min-width:152px;padding:6px;display:flex;flex-direction:column;gap:2px;background:rgba(255,255,255,.55);-webkit-backdrop-filter:blur(22px) saturate(1.8);backdrop-filter:blur(22px) saturate(1.8);border:1px solid rgba(255,255,255,.7);border-radius:16px;box-shadow:0 14px 44px rgba(0,0,0,.15),inset 0 1px 1px rgba(255,255,255,.9);opacity:0;transform:translateY(-8px) scale(.97);pointer-events:none;transition:opacity .3s,transform .35s cubic-bezier(.4,0,.2,1);z-index:300}
+.lang-sw.is-open .lang-sw__menu{opacity:1;transform:none;pointer-events:auto}
+.lang-sw__menu button{display:flex;align-items:center;justify-content:space-between;gap:16px;font:inherit;font-size:11px;letter-spacing:.03em;padding:9px 13px;color:var(--text-secondary);border-radius:11px;background:none;text-align:left;cursor:pointer;transition:background .25s,color .25s}
+.lang-sw__menu button:hover{background:rgba(0,0,0,.045);color:var(--text-primary)}
+.lang-sw__menu button.is-on{background:rgba(255,255,255,.92);color:var(--text-primary);box-shadow:0 1px 5px rgba(0,0,0,.08)}
+.lang-sw__menu button .code{font-size:9px;letter-spacing:.1em;opacity:.5}
+@media(max-width:720px){.lang-sw{margin-left:0}.lang-sw__toggle{padding:6px 11px}}
+`;
 document.head.appendChild(css);
 const sw=document.createElement('div');
 sw.className='lang-sw';
-sw.innerHTML='<button data-l="ko">KO</button><button data-l="en">EN</button><button data-l="ja">JA</button><button data-l="zh">ZH</button>';
-sw.addEventListener('click',e=>{const b=e.target.closest('button');if(b)setLang(b.dataset.l)});
-(document.querySelector('.header__actions')||document.body).appendChild(sw);
+sw.innerHTML=`<button class="lang-sw__toggle" aria-label="language"><span class="cur">EN</span><span class="caret">&#9662;</span></button><div class="lang-sw__menu"><button data-l="ko"><span>한국어</span><span class="code">KO</span></button><button data-l="en"><span>English</span><span class="code">EN</span></button><button data-l="ja"><span>日本語</span><span class="code">JA</span></button><button data-l="zh"><span>中文</span><span class="code">ZH</span></button></div>`;
+sw.querySelector('.lang-sw__toggle').addEventListener('click',function(e){e.stopPropagation();sw.classList.toggle('is-open')});
+sw.querySelector('.lang-sw__menu').addEventListener('click',function(e){const b=e.target.closest('button');if(b){setLang(b.dataset.l);sw.classList.remove('is-open')}});
+document.addEventListener('click',function(){sw.classList.remove('is-open')});
+var _isM=window.innerWidth<=720, _mn=document.querySelector('#megaMenu .mobile-nav');
+if(_isM&&_mn){ sw.classList.add('lang-sw--inmenu'); _mn.parentNode.insertBefore(sw,_mn); }
+else{ (document.querySelector('.header__actions')||document.body).appendChild(sw); }
 var _q=new URLSearchParams(location.search);setLang(_q.get('lang')||(_q.has('still')?'en':(((()=>{try{return localStorage.getItem('ml-lang')}catch(e){return null}})())||'en')));
 })();

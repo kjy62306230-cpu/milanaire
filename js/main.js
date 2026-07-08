@@ -11,6 +11,16 @@ const megaMenuHTML = `
   <div class="overlay__inner">
     <button class="overlay__close" data-close>&times;</button>
     <h2 class="overlay__title serif">Pro<em>ducts</em></h2>
+    <nav class="mobile-nav">
+      <a href="index.html">Rooms</a>
+      <a href="catalog.html">Products</a>
+      <a href="#">Projects</a>
+      <a href="#">Magazine</a>
+      <a href="catalog.html">Search</a>
+      <a href="account.html">Account</a>
+      <a href="account.html#wishlist">Favorites</a>
+      <a href="checkout.html">Cart</a>
+    </nav>
     <div class="mega">
       <ul class="mega__cats">
         <li><a href="catalog.html">All</a></li>
